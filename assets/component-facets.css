@@ -177,7 +177,7 @@
   align-self: flex-start;
   grid-column: 1;
   grid-row: 1;
-  display: inline;
+  display: flex;
   flex-wrap: wrap;
 }
 
