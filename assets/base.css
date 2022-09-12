@@ -3047,3 +3047,10 @@ $content-inset: 5%;
         font-size: 1.3rem;
     }
 }
+
+.header__inline-menu {
+    position: absolute;
+    top: 160%;
+    left: auto !important;
+    right: 60px;
+}
