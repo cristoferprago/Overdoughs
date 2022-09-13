@@ -16,8 +16,13 @@ display: flex;
 flex-direction: row;
 }
 
-.sidebar{
-  list-style-type: none;
+.sidebar ul{
+  list-style: none;
+}
+
+.sidebar ul li a{
+  text-decoration:none;
+  color: #F57325;
 }
 
 @media screen and (min-width: 750px) {
@@ -32,9 +37,9 @@ padding-bottom: {{ section.settings.padding_bottom }}px;
 
 <div class="section-{{ section.id }}-padding">
   <div class="sidebar">
-    <ul>
+    <!--<ul> -->
       {%- for collection in collections -%}
-      <li>
+      <!--<li> -->
         <!--
         These control flow tags check to see if there is a featured image for a collection.
         If there isn't one, then we assign the image from the first product in the collection.
@@ -53,9 +58,9 @@ padding-bottom: {{ section.settings.padding_bottom }}px;
           -->
           {{ collection.title }}
         </a>
-      </li>
+      <!--</li> -->
       {%- endfor -%}
-    </ul>
+    <!--</ul> -->
   </div>
   <div>
     {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
