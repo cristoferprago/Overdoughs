@@ -17,9 +17,9 @@ flex-direction: row;
 }
 
 .sidebar{
-  display: flex;
-  flex-direction: column;
- 
+display: flex;
+flex-direction: column;
+
 
 
 }
@@ -27,15 +27,15 @@ flex-direction: row;
 
 
 .sidebar a{
-  text-decoration:none;
-  color: #F57325;
-  
-  padding: 1.5rem 4.5rem 1.5rem 3rem;
+text-decoration:none;
+color: #F57325;
+
+padding: 1.5rem 4.5rem 1.5rem 3rem;
 }
 
 .sidebar a:hover {
-  background-color:#F57325;
-  color: #fff;
+background-color:#F57325;
+color: #fff;
 }
 
 
@@ -52,36 +52,38 @@ padding-bottom: {{ section.settings.padding_bottom }}px;
 <div class="section-{{ section.id }}-padding">
   <div class="sidebar">
     <!--<ul> -->
-      {%- for collection in collections -%}
-      <!--<li> -->
-        <!--
+    {%- for collection in collections -%}
+    <!--<li> -->
+    <!--
         These control flow tags check to see if there is a featured image for a collection.
         If there isn't one, then we assign the image from the first product in the collection.
       -->
-        
-        {%- if collection.image -%}
-        {%- assign collection_image = collection.image -%}
-        {%- elsif collection.products.first and collection.products.first.images != empty -%}
-        {%- assign collection_image = collection.products.first.featured_image -%}
-        {%- else -%}
-        {%- assign collection_image = blank -%}
-        {%- endif -%}
-{% if collection.title %}
+
+    {%- if collection.image -%}
+    {%- assign collection_image = collection.image -%}
+    {%- elsif collection.products.first and collection.products.first.images != empty -%}
+    {%- assign collection_image = collection.products.first.featured_image -%}
+    {%- else -%}
+    {%- assign collection_image = blank -%}
+    {%- endif -%}
+    {% if collection.title %}
     {% assign collection_title = collection.title %}
-{% endif %}
-        {% if collection_title == "Appointments" or collection_title == "Crinkles" or collection_title == "OD Sourdough Pizza" %}
-        <a href="{{ collection.url }}">
-          <!--
+    {% endif %}
+    {% if collection_title == "Appointments" or collection_title == "Crinkles" or collection_title == "OD Sourdough
+    Pizza" %}
+    <a href="{{ collection.url }}">
+      <!--
             <img src="{{ collection_image | img_url: '480x' }}" alt="">
           -->
-          {{ collection.title }}
-        </a>
-          {% endif %}
-      <!--</li> -->
-      {%- endfor -%}
+      {{ collection.title }}
+    </a>
+    {% endif %}
+    <!--</li> -->
+    {%- endfor -%}
     <!--</ul> -->
   </div>
   <div>
+    {{collection.title}}
     {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
     {{ 'component-facets.css' | asset_url | stylesheet_tag }}
     <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
