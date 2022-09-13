@@ -66,6 +66,7 @@ padding-bottom: {{ section.settings.padding_bottom }}px;
         These control flow tags check to see if there is a featured image for a collection.
         If there isn't one, then we assign the image from the first product in the collection.
       -->
+        
         {%- if collection.image -%}
         {%- assign collection_image = collection.image -%}
         {%- elsif collection.products.first and collection.products.first.images != empty -%}
@@ -73,13 +74,15 @@ padding-bottom: {{ section.settings.padding_bottom }}px;
         {%- else -%}
         {%- assign collection_image = blank -%}
         {%- endif -%}
-        
+
+        {% if collection.title=="Appointments" %}
         <a href="{{ collection.url }}">
           <!--
             <img src="{{ collection_image | img_url: '480x' }}" alt="">
           -->
           {{ collection.title }}
         </a>
+          {% endif %}
       <!--</li> -->
       {%- endfor -%}
     <!--</ul> -->
