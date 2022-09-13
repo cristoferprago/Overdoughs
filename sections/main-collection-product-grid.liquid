@@ -69,13 +69,14 @@ padding-bottom: {{ section.settings.padding_bottom }}px;
         {%- else -%}
         {%- assign collection_image = blank -%}
         {%- endif -%}
-
+        <button>
         <a href="{{ collection.url }}">
           <!--
             <img src="{{ collection_image | img_url: '480x' }}" alt="">
           -->
           {{ collection.title }}
         </a>
+          </button>
       <!--</li> -->
       {%- endfor -%}
     <!--</ul> -->
