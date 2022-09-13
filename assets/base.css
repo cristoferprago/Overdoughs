@@ -3049,3 +3049,10 @@ $content-inset: 5%;
 }
 
 
+.header__inline-menu {
+  position: absolute;
+  top: 160%;
+  left: auto !important;
+  right: 60px;
+}
+
