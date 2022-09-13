@@ -16,16 +16,22 @@ display: flex;
 flex-direction: row;
 }
 
+.sidebar{
+  list-style-type: none;
+}
+
 @media screen and (min-width: 750px) {
 .section-{{ section.id }}-padding {
 padding-top: {{ section.settings.padding_top }}px;
 padding-bottom: {{ section.settings.padding_bottom }}px;
 }
 }
+
+
 {%- endstyle -%}
 
 <div class="section-{{ section.id }}-padding">
-  <div>
+  <div class="sidebar">
     <ul>
       {%- for collection in collections -%}
       <li>
