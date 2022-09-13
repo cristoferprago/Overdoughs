@@ -69,8 +69,7 @@ padding-bottom: {{ section.settings.padding_bottom }}px;
     {% if collection.title %}
     {% assign collection_title = collection.title %}
     {% endif %}
-    {% if collection_title == "Appointments" or collection_title == "Crinkles" or collection_title == "OD Sourdough
-    Pizza" %}
+    {% if collection_title == "OD Sourdough Pizza" %}
     <a href="{{ collection.url }}">
       <!--
             <img src="{{ collection_image | img_url: '480x' }}" alt="">
