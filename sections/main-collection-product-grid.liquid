@@ -69,7 +69,11 @@ padding-bottom: {{ section.settings.padding_bottom }}px;
     {% if collection.title %}
     {% assign collection_title = collection.title %}
     {% endif %}
-    {% if collection_title == "OD Sourdough Pizza" or collection_title == "OD Fat Fries" or collection_title == "Chicken & Combos" or collection_title == "Mini Flanky Empanada" or collection_title == "Mini Chonky Cookies" or collection_title == "Mini Chonky Cookies With Walnuts" or collection_title == "Elait Ice Cream" or collection_title == "Crinkles" or collection_title == "OD Bavarian Cream Doughnuts" or collection_title == "OD Spanish Bread" or collection_title == "Bottled Drinks"%}
+    {% if collection_title == "OD Sourdough Pizza" or collection_title == "OD Fat Fries" or collection_title == "Chicken
+    & Combos" or collection_title == "Mini Flanky Empanada" or collection_title == "Mini Chonky Cookies" or
+    collection_title == "Mini Chonky Cookies With Walnuts" or collection_title == "Elait Ice Cream" or collection_title
+    == "Crinkles" or collection_title == "OD Bavarian Cream Doughnuts" or collection_title == "OD Spanish Bread" or
+    collection_title == "Bottled Drinks"%}
     <a href="{{ collection.url }}">
       <!--
             <img src="{{ collection_image | img_url: '480x' }}" alt="">
@@ -82,7 +86,7 @@ padding-bottom: {{ section.settings.padding_bottom }}px;
     <!--</ul> -->
   </div>
   <div>
-    {{collection.title}}
+    <strong>{{collection.title}}</strong>
     {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
     {{ 'component-facets.css' | asset_url | stylesheet_tag }}
     <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
