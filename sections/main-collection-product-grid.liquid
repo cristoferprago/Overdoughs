@@ -75,7 +75,7 @@ padding-bottom: {{ section.settings.padding_bottom }}px;
         {%- assign collection_image = blank -%}
         {%- endif -%}
 
-        {% if collection=="Appointments" %}
+        {% if collection.collections=="Appointments" %}
         <a href="{{ collection.url }}">
           <!--
             <img src="{{ collection_image | img_url: '480x' }}" alt="">
