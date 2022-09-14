@@ -36,10 +36,7 @@ background-color:#F57325;
 color: #fff;
 }
 
-#Slider-{{ section.id }}{
-  display: grid !important;
-  grid-template-columns: repeat(4,1fr) !important;
-}
+
 
 #Slide-{{ section.id }}-{{ forloop.index }}{
   width: 100% !important;
@@ -179,6 +176,7 @@ endif
           show_secondary_image: section.settings.show_secondary_image,
           show_vendor: section.settings.show_vendor,
           show_rating: section.settings.show_rating
+          
           %}
         </li>
         {%- else -%}
