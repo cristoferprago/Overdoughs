@@ -11,7 +11,30 @@
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    
   }
+
+  .sidebar{
+display: flex;
+flex-direction: column;
+
+
+
+}
+
+
+
+.sidebar a{
+text-decoration:none;
+color: #F57325;
+font-weight: bold;
+padding: 1.5rem 4.5rem 1.5rem 3rem;
+}
+
+.sidebar a:hover {
+background-color:#F57325;
+color: #fff;
+}
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
@@ -30,7 +53,95 @@
   endif
 -%}
 
-<div class="color-{{ section.settings.color_scheme }} isolate gradient">
+<div class="color-{{ section.settings.color_scheme }} isolate gradient" style=" display: flex ">
+  <div class="sidebar">
+    <!--<ul> -->
+    {%- for collection in collections -%}
+    <!--<li> -->
+    <!--
+        These control flow tags check to see if there is a featured image for a collection.
+        If there isn't one, then we assign the image from the first product in the collection.
+      -->
+
+    {%- if collection.image -%}
+    {%- assign collection_image = collection.image -%}
+    {%- elsif collection.products.first and collection.products.first.images != empty -%}
+    {%- assign collection_image = collection.products.first.featured_image -%}
+    {%- else -%}
+    {%- assign collection_image = blank -%}
+    {%- endif -%}
+    {% if collection.title %}
+    {% assign collection_title = collection.title %}
+    {% endif %}
+{%- endfor -%}
+    {% assign colUrl = " "%}
+
+    
+<a href="https://overdoughs.ph/pages/pages-mini-chonky-cookies">
+        {{ collection.title }}Mini Chonky Cookies
+      </a>
+
+    
+<a href="https://overdoughsph.myshopify.com/pages/pages-crinkles">
+        {{ collection.title }}Crinkles
+      </a>
+
+   
+<a href="https://overdoughs.ph/pages/pages-od-cream-bavarian-doughnuts">
+        {{ collection.title }}OD Bavarian Cream Doughnuts
+      </a>
+
+    
+      <a href="https://overdoughs.ph/pages/pages-spanish-bread">
+        {{ collection.title }}OD Spanish Bread
+      </a>
+    
+    
+      <a href="https://overdoughs.ph/pages/pages-od-sourdough-pizza">
+        {{ collection.title }}OD Sourdough Pizza
+      </a>
+
+    
+      <a href="https://overdoughs.ph/pages/pages-chicken-combos">
+        {{ collection.title }}Chicken & Combos
+      </a>
+    
+   
+      <a href="https://overdoughs.ph/pages/pages-od-fat-fries">
+        {{ collection.title }}OD Fat Fries
+      </a>
+
+<a href="https://overdoughs.ph/pages/pages-elait-icecream">
+        {{ collection.title }}Elait Ice Cream
+      </a>
+
+    
+    
+      <a href="https://overdoughs.ph/pages/order-now">
+        {{ collection.title }}Bottled Drinks
+      </a>
+
+    
+
+ 
+    
+    
+    
+    
+
+
+    
+
+    
+  
+    <!--</li> -->
+    
+    <!--</ul> -->
+  </div>
+
+
+
+  
   <div class="collection page-width{% if section.settings.swipe_on_mobile == true and section.settings.collection.all_products_count > 2 and section.settings.products_to_show > 2 %} page-width-desktop{% endif %} section-{{ section.id }}-padding">
     {% unless section.settings.title == blank %}
       <div class="title-wrapper-with-link{% if section.settings.title == blank %} title-wrapper-with-link--no-heading{% endif %}{% if section.settings.collection.all_products_count > 2 and section.settings.swipe_on_mobile and section.settings.products_to_show > 2 %} title-wrapper--self-padded-tablet-down{% endif %} title-wrapper--no-top-margin">
@@ -43,7 +154,7 @@
     {% endunless %}
   
     <slider-component class="slider-mobile-gutter">
-      <ul id="Slider-{{ section.id }}" class="grid grid--2-col product-grid{% if products_to_display == 4 or section.settings.collection == blank %} grid--2-col-tablet grid--4-col-desktop{% else %} grid--3-col-tablet{% endif %}{% if products_to_display > 5 %} grid--one-third-max grid--4-col-desktop grid--quarter-max{% endif %}{% if section.settings.collection.all_products_count > 2 and section.settings.swipe_on_mobile and section.settings.products_to_show > 2 %} slider slider--tablet grid--peek{% endif %}" role="list">
+      <ul id="Slider-{{ section.id }}" class="grid grid--4-col product-grid{% if products_to_display == 4 or section.settings.collection == blank %} grid--2-col-tablet grid--4-col-desktop{% else %} grid--3-col-tablet{% endif %}{% if products_to_display > 5 %} grid--one-third-max grid--4-col-desktop grid--quarter-max{% endif %}{% if section.settings.collection.all_products_count > 2 and section.settings.swipe_on_mobile and section.settings.products_to_show > 2 %} slider slider--tablet grid--peek{% endif %}" role="list">
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
           <li id="Slide-{{ section.id }}-{{ forloop.index }}" class="grid__item{% if section.settings.collection.all_products_count > 2 and section.settings.swipe_on_mobile and section.settings.products_to_show > 2 %} slider__slide{% endif %}">
             {% render 'card-product',

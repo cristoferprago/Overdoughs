@@ -223,3 +223,16 @@ width:100%;
  padding-left: 10px;
  padding-right: 10px;
 }
+
+@media(min-width: 1024px) {
+  #CollectionSection .grid-uniform {
+    display: grid !important;
+    grid-template-columns: repeat(4,1fr) !important;
+  }
+  #CollectionSection .grid-uniform .grid__item {
+    width: 100% !important;
+  }
+  #CollectionSection .grid-uniform .grid-product__image-wrapper {
+    height: auto !important;
+  }
+}
