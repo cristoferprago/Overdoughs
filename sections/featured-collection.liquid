@@ -79,13 +79,13 @@ endif
 <div class="color-{{ section.settings.color_scheme }} isolate gradient" style=" display: flex ">
   <div class="sidebar">
     <!--<ul> -->
-    {%- for collection in collections -%}
+    
     <!--<li> -->
     <!--
         These control flow tags check to see if there is a featured image for a collection.
         If there isn't one, then we assign the image from the first product in the collection.
       -->
-
+      {%- for collection in collections -%}
     {%- if collection.image -%}
     {%- assign collection_image = collection.image -%}
     {%- elsif collection.products.first and collection.products.first.images != empty -%}
