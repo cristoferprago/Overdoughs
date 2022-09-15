@@ -2220,6 +2220,10 @@ input[type='checkbox'] {
 
 .header > .header__heading-link {
   line-height: 0;
+  background: #33acff;
+            color: #fff;
+          border-radius: 5px;
+          font-weight: 600;
 }
 
 .header__heading,
