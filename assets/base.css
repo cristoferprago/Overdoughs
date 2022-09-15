@@ -2528,14 +2528,14 @@ details[open] > .header__icon--menu .icon-hamburger {
 }
 
 
-.list-menu li:nth-child(6){
+.list-menu li:nth-child(7){
           background: #F57325;
           color: #fff !important;
           border-radius: 20px;
           font-weight: 600;
 }
 
-.list-menu li ul li a{
+.list-menu li ul li a:nth-child(7){
   color: #fff !important;
 }
 
