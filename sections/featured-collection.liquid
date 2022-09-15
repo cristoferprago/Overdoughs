@@ -17,7 +17,7 @@ padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px
 .sidebar{
 display: flex;
 flex-direction: column;
-
+display: none;
 
 }
 
@@ -162,12 +162,76 @@ endif
     <!--</ul> -->
   </div>
   <div class="burger-menu">
-    <summary class="header__icon header__icon--menu header__icon--summary link focus-inset" aria-label="{{ 'sections.header.menu' | t }}">
-      <span>
-        {% render 'icon-hamburger' %}
-        {% render 'icon-close' %}
-      </span>
-    </summary>
+    <div id="menuToggle">
+      <!--
+      A fake / hidden checkbox is used as click reciever,
+      so you can use the :checked selector on it.
+      -->
+      <input type="checkbox" />
+      
+      <!--
+      Some spans to act as a hamburger.
+      
+      They are acting like a real hamburger,
+      not that McDonalds stuff.
+      -->
+      <span></span>
+      <span></span>
+      <span></span>
+      
+      <!--
+      Too bad the menu has to be inside of the button
+      but hey, it's pure CSS magic.
+      -->
+
+      {%- for collection in collections -%}
+      <ul id="menu">
+        <a href="https://overdoughs.ph/pages/pages-mini-chonky-cookies">
+          {{ collection.title }}Mini Chonky Cookies
+        </a>
+    
+    
+        <a href="https://overdoughsph.myshopify.com/pages/pages-crinkles">
+          {{ collection.title }}Crinkles
+        </a>
+    
+    
+        <a href="https://overdoughs.ph/pages/pages-od-cream-bavarian-doughnuts">
+          {{ collection.title }}OD Bavarian Cream Doughnuts
+        </a>
+    
+    
+        <a href="https://overdoughs.ph/pages/pages-spanish-bread">
+          {{ collection.title }}OD Spanish Bread
+        </a>
+    
+    
+        <a href="https://overdoughs.ph/pages/pages-od-sourdough-pizza">
+          {{ collection.title }}OD Sourdough Pizza
+        </a>
+    
+    
+        <a href="https://overdoughs.ph/pages/pages-chicken-combos">
+          {{ collection.title }}Chicken & Combos
+        </a>
+    
+    
+        <a href="https://overdoughs.ph/pages/pages-od-fat-fries">
+          {{ collection.title }}OD Fat Fries
+        </a>
+    
+        <a href="https://overdoughs.ph/pages/pages-elait-icecream">
+          {{ collection.title }}Elait Ice Cream
+        </a>
+    
+    
+    
+        <a href="https://overdoughs.ph/pages/order-now">
+          {{ collection.title }}Bottled Drinks
+        </a>
+        
+      </ul>
+    </div>
   </div>
 
 
