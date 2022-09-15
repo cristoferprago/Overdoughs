@@ -2527,7 +2527,7 @@ details[open] > .header__icon--menu .icon-hamburger {
     font-weight: bold;
 }
 
-ul.list-menu li:nth-child(1) a.header__menu-item {
+li:nth-child(1) a.header__menu-item {
             background: #33acff;
             color: #fff;
           border-radius: 5px;
