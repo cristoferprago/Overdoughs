@@ -2529,7 +2529,7 @@ details[open] > .header__icon--menu .icon-hamburger {
 
 .header__menu-item {
             background: #F57325;
-            color: #fff;
+            color: #fff !important;
           border-radius: 20px;
           font-weight: 600;
 }
