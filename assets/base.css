@@ -2535,7 +2535,7 @@ details[open] > .header__icon--menu .icon-hamburger {
           font-weight: 600;
 }
 
-.list-menu li span:nth-child(7){
+.list-menu li a span:nth-child(7){
   color: #fff;
 }
 
