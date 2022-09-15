@@ -2528,10 +2528,10 @@ details[open] > .header__icon--menu .icon-hamburger {
 }
 
 .header__menu-item:nth-child(2) {
-            background: #33acff !important;
-            color: #fff !important;
-          border-radius: 5px !important;
-          font-weight: 600 !important;
+            background: #33acff;
+            color: #fff;
+          border-radius: 5px;
+          font-weight: 600;
 }
 
 
