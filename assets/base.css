@@ -2536,7 +2536,7 @@ details[open] > .header__icon--menu .icon-hamburger {
 }
 
 .list-menu li a:nth-child(7){
-  color: #fff;
+  color: #fff !important;
 }
 
 
