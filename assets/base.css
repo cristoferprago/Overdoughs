@@ -2529,6 +2529,17 @@ details[open] > .header__icon--menu .icon-hamburger {
     font-weight: bold;
 }
 
+
+.list-menu li:nth-child(7){
+          background: #F57325;
+          color: #fff !important;
+          border-radius: 20px;
+          font-weight: 600;
+        padding: 0px 20px 0px 20px;
+}
+
+
+
 .header__menu-item:hover {
   color: rgb(var(--color-foreground));
 }
@@ -3076,6 +3087,7 @@ $content-inset: 5%;
     }
 }
 
+<<<<<<< HEAD
 .list-menu li:nth-child(7){
           background: #F57325;
           color: #fff;
@@ -3093,3 +3105,11 @@ $content-inset: 5%;
   color: white;
   text-align: center;
 }
+=======
+ul.list-menu li:nth-child(1) a.header__menu-item {
+            background: #33acff;
+            color: #fff;
+          border-radius: 5px;
+          font-weight: 600;
+}
+>>>>>>> 5b97eca5e418d157435e9528a00bf83f7a3344da
