@@ -605,6 +605,8 @@ h6:empty {
   color: rgb(var(--color-foreground));
 }
 
+
+
 .link--text:hover {
   color: rgba(var(--color-foreground), 0.75);
 }
@@ -3072,4 +3074,22 @@ $content-inset: 5%;
     h3.card__heading {
         font-size: 1.3rem;
     }
+}
+
+.list-menu li:nth-child(7){
+          background: #F57325;
+          color: #fff;
+          border-radius: 20px;
+          font-weight: 600;
+        padding: 0px 20px 0px 20px;
+}
+
+.list-menu li:nth-child(7) a span{
+          
+          color: #fff;
+          
+}
+.list-menu li:nth-child(7) .list-menu__item{
+  color: white;
+  text-align: center;
 }

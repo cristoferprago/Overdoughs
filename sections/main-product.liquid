@@ -13,7 +13,48 @@
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    display: flex;
   }
+
+  #right-container{
+    width: 100%;
+  }
+
+  .sidebar{
+display: flex;
+flex-direction: column;
+
+
+}
+
+
+
+.sidebar a{
+text-decoration:none;
+color: #F57325;
+font-weight: bold;
+padding: 1.5rem 4.5rem 1.5rem 3rem;
+}
+
+.sidebar a:hover {
+background-color:#F57325;
+color: #fff;
+}
+
+#card-wrapper{
+  width: 100% !important;
+}
+
+#Slider-{{ section.id }}{
+  display: grid !important;
+  grid-template-columns: repeat(4,1fr) !important;
+}
+
+.burger-menu{
+  display:none;
+  
+}
+
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
@@ -22,6 +63,151 @@
     }
   }
 {%- endstyle -%}
+{% style %}
+#menuToggle
+{
+
+  position: relative;
+  top: 50px;
+  left: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #fff;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+  background-color: #fff;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -70px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  top: -70px;
+  background: #F57325;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #fff;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -125px 0 0 -50px;
+  padding: 50px;
+  padding-top: 80px;
+  
+  background: #F57325;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+{% endstyle %}
 
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 
@@ -32,10 +218,177 @@
   <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- endif -%}
 
-<section class="page-width section-{{ section.id }}-padding">
-  <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.gallery_layout }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
+<section class="page-width section-{{ section.id }}-padding" >
+
+
+  <div class="sidebar">
+    <!--<ul> -->
+    
+    <!--<li> -->
+    <!--
+        These control flow tags check to see if there is a featured image for a collection.
+        If there isn't one, then we assign the image from the first product in the collection.
+      -->
+      {%- for collection in collections -%}
+    {%- if collection.image -%}
+    {%- assign collection_image = collection.image -%}
+    {%- elsif collection.products.first and collection.products.first.images != empty -%}
+    {%- assign collection_image = collection.products.first.featured_image -%}
+    {%- else -%}
+    {%- assign collection_image = blank -%}
+    {%- endif -%}
+    {% if collection.title %}
+    {% assign collection_title = collection.title %}
+    {% endif %}
+    {%- endfor -%}
+    
+
+
+    <a href="https://overdoughs.ph/pages/pages-mini-chonky-cookies">
+      {{ collection.title }}Mini Chonky Cookies
+    </a>
+
+
+    <a href="https://overdoughsph.myshopify.com/pages/pages-crinkles">
+      {{ collection.title }}Crinkles
+    </a>
+
+
+    <a href="https://overdoughs.ph/pages/pages-od-cream-bavarian-doughnuts">
+      {{ collection.title }}OD Bavarian Cream Doughnuts
+    </a>
+
+
+    <a href="https://overdoughs.ph/pages/pages-spanish-bread">
+      {{ collection.title }}OD Spanish Bread
+    </a>
+
+
+    <a href="https://overdoughs.ph/pages/pages-od-sourdough-pizza">
+      {{ collection.title }}OD Sourdough Pizza
+    </a>
+
+
+    <a href="https://overdoughs.ph/pages/pages-chicken-combos">
+      {{ collection.title }}Chicken & Combos
+    </a>
+
+
+    <a href="https://overdoughs.ph/pages/pages-od-fat-fries">
+      {{ collection.title }}OD Fat Fries
+    </a>
+
+    <a href="https://overdoughs.ph/pages/pages-elait-icecream">
+      {{ collection.title }}Elait Ice Cream
+    </a>
+
+
+
+    <a href="https://overdoughs.ph/pages/order-now">
+      {{ collection.title }}Bottled Drinks
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--</li> -->
+
+    <!--</ul> -->
+  </div>
+  
+<div class="burger-menu">
+  <div id="menuToggle">
+    <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+    <input type="checkbox" />
+    
+    <!--
+    Some spans to act as a hamburger.
+    
+    They are acting like a real hamburger,
+    not that McDonalds stuff.
+    -->
+    <span></span>
+    <span></span>
+    <span></span>
+    
+    <!--
+    Too bad the menu has to be inside of the button
+    but hey, it's pure CSS magic.
+    -->
+    <ul id="menu">
+      <a href="https://overdoughs.ph/pages/pages-mini-chonky-cookies">
+        <li>Mini Chonky Cookies</li>
+      </a>
+    
+    
+      <a href="https://overdoughsph.myshopify.com/pages/pages-crinkles">
+        <li>Crinkles</li>
+      </a>
+    
+    
+      <a href="https://overdoughs.ph/pages/pages-od-cream-bavarian-doughnuts">
+        <li>OD Bavarian Cream Doughnuts</li>
+      </a>
+    
+    
+      <a href="https://overdoughs.ph/pages/pages-spanish-bread">
+        <li>OD Spanish Bread</li>
+      </a>
+    
+    
+      <a href="https://overdoughs.ph/pages/pages-od-sourdough-pizza">
+        <li>OD Sourdough Pizza</li>
+      </a>
+    
+    
+      <a href="https://overdoughs.ph/pages/pages-chicken-combos">
+        <li>Chicken & Combos</li>
+      </a>
+    
+    
+      <a href="https://overdoughs.ph/pages/pages-od-fat-fries">
+        <li>OD Fat Fries</li>
+      </a>
+    
+      <a href="https://overdoughs.ph/pages/pages-elait-icecream">
+        <li>Elait Ice Cream</li>
+      </a>
+    
+    
+    
+      <a href="https://overdoughs.ph/pages/order-now">
+       <li>Bottled Drinks</li> 
+      </a>
+    </ul>
+  </div>
+
+  </a>
+</div>
+
+  </div>
+
+
+  
+  <div id="right-container" class="product product--{{ section.settings.media_size }} product--{{ section.settings.gallery_layout }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
     <div class="grid__item product__media-wrapper">
       <media-gallery id="MediaGallery-{{ section.id }}" role="region" {% if section.settings.enable_sticky_info %}class="product__media-gallery"{% endif %} aria-label="{{ 'products.product.media.gallery_viewer' | t }}" data-desktop-layout="{{ section.settings.gallery_layout }}">
+        
+        
+        
+        
         <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
         <slider-component id="GalleryViewer-{{ section.id }}" class="slider-mobile-gutter">
           <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">
@@ -198,6 +551,7 @@
             </p>
           {%- when 'title' -%}
             <h1 class="product__title" {{ block.shopify_attributes }}>
+            
               {{ product.title | escape }}
             </h1>
           {%- when 'price' -%}
