@@ -1,1 +1,233 @@
-{"sections":{"main":{"type":"main-page","settings":{"padding_top":0,"padding_bottom":4}},"1663314482808aa913":{"type":"image-with-text","disabled":true,"blocks":{"1663314481495627c1-0":{"type":"heading","settings":{"heading":"Overdoughs","heading_size":"h2"}},"1663314481495627c1-1":{"type":"text","settings":{"text":"<p><strong>Overdoughs<\/strong>, a homegrown pastry shop, is best known for Mini Chonky Cookies, Crinkles and signature coffee - OD Barako Cold Brew 36. While this not OD-nary bakeshop continues to serve delectable pastries, we believe in <em><strong>Doing Good Through Good Food<\/strong><\/em> by bringing our advocacy to action - Inclusivity and Diversity. Thus, we provide equal opportunities and growth to the Philippine Deaf Community which we gladly call, <strong>Our Deaf Partners.<\/strong><\/p>","text_style":"body"}},"1663314481495627c1-2":{"type":"button","disabled":true,"settings":{"button_label":"Button label","button_link":""}}},"block_order":["1663314481495627c1-0","1663314481495627c1-1","1663314481495627c1-2"],"settings":{"image":"shopify:\/\/shop_images\/OD_Photo_1.jpg","height":"adapt","desktop_image_width":"small","layout":"text_first","desktop_content_position":"top","desktop_content_alignment":"left","content_layout":"no-overlap","color_scheme":"background-1","mobile_content_alignment":"left","padding_top":36,"padding_bottom":36}},"1663314565ab23df4a":{"type":"image-with-text","disabled":true,"blocks":{"1663314565908cc9db-0":{"type":"heading","settings":{"heading":"DEAF INCLUSIVITY","heading_size":"h2"}},"1663314565908cc9db-1":{"type":"text","settings":{"text":"<p>This deaf inclusive advocacy is made possible through our partnership with organizations and institutions, namely, De La Salle College of Saint Benilde - School of Deaf Education and Applied Studies, and Hand & Heart, as we aim <em><strong>to bridge the gap between the Deaf and the hearing<\/strong><\/em>. This explains why our branches are mainstreamed by our friendly and capable Deaf Partners<\/p>","text_style":"body"}},"1663314565908cc9db-2":{"type":"button","disabled":true,"settings":{"button_label":"Button label","button_link":""}}},"block_order":["1663314565908cc9db-0","1663314565908cc9db-1","1663314565908cc9db-2"],"settings":{"image":"shopify:\/\/shop_images\/Our_Story_Photo_1.jpg","height":"adapt","desktop_image_width":"medium","layout":"image_first","desktop_content_position":"top","desktop_content_alignment":"left","content_layout":"no-overlap","color_scheme":"background-1","mobile_content_alignment":"left","padding_top":36,"padding_bottom":36}},"16633146367c42e05b":{"type":"image-with-text","disabled":true,"blocks":{"166331463641a2f4df-0":{"type":"heading","disabled":true,"settings":{"heading":"Image with text","heading_size":"h1"}},"166331463641a2f4df-1":{"type":"text","settings":{"text":"<p>With the exemplar display of both food and our Deaf Partners, we have launched the first <strong>Overdoughs Cafe<\/strong> at Promenade Mall, Greenhills that extends our product line to savory menu items like OD Sourdough Pizza, Chicken Strips, and OD Fat Fries in May 2022.<\/p>","text_style":"body"}},"166331463641a2f4df-2":{"type":"button","disabled":true,"settings":{"button_label":"Button label","button_link":""}}},"block_order":["166331463641a2f4df-0","166331463641a2f4df-1","166331463641a2f4df-2"],"settings":{"image":"shopify:\/\/shop_images\/OD_Photo_3.jpg","height":"adapt","desktop_image_width":"medium","layout":"text_first","desktop_content_position":"top","desktop_content_alignment":"left","content_layout":"no-overlap","color_scheme":"background-1","mobile_content_alignment":"left","padding_top":36,"padding_bottom":36}},"1663316378976599d1":{"type":"image-with-text","disabled":true,"blocks":{"16633163784e6b8c06-0":{"type":"heading","settings":{"heading":"Elait","heading_size":"h2"}},"16633163784e6b8c06-1":{"type":"text","settings":{"text":"<p><strong>Elait<\/strong>, an artisanal rolled ice cream and country's first rolled yogurt, spreads <strong>Happiness in a Cup<\/strong> through the variety of novelty flavors, such as Strawberry Trifle, Chocolate Overload, Triple Choco Chonky, and alike with a choice of custard or yogurt base which are made right in front of you so to be part of the dessert-making experience.<\/p><p>This happiness in a cup also extends its array of products like the Elait Ice Cream in a Pint, Elait Yogurt Ice Cream, and Elait Milk Drinks to be enjoyed in the comforts of home.<\/p>","text_style":"body"}},"16633163784e6b8c06-2":{"type":"button","disabled":true,"settings":{"button_label":"Button label","button_link":""}}},"block_order":["16633163784e6b8c06-0","16633163784e6b8c06-1","16633163784e6b8c06-2"],"settings":{"image":"shopify:\/\/shop_images\/Elait_Photo_1.jpg","height":"adapt","desktop_image_width":"small","layout":"text_first","desktop_content_position":"top","desktop_content_alignment":"left","content_layout":"no-overlap","color_scheme":"background-1","mobile_content_alignment":"left","padding_top":36,"padding_bottom":36}},"16633164950aeeaea5":{"type":"image-with-text","disabled":true,"blocks":{"16633164954d0e9441-1":{"type":"text","settings":{"text":"<p>Furthermore, every Elait cup purchased, you get to support the Philippine Local Dairy Industry. We believe in the quality of Filipino products. With less than 1% of our Dairy Products being used locally, we make it our mission to support this industry by <\/p><p>using locally sourced ingredients.<\/p><p>Facebook: <a href=\"https:\/\/www.facebook.com\/elaitph\"><span style=\"text-decoration:underline\">Elaitph<\/span>\t<\/a>Instagram: <a href=\"https:\/\/www.instagram.com\/elaitph\/\"><span style=\"text-decoration:underline\">@elaitph<\/span><\/a><\/p>","text_style":"body"}}},"block_order":["16633164954d0e9441-1"],"settings":{"image":"shopify:\/\/shop_images\/Elait_Photo_2.jpg","height":"adapt","desktop_image_width":"small","layout":"image_first","desktop_content_position":"top","desktop_content_alignment":"left","content_layout":"no-overlap","color_scheme":"background-1","mobile_content_alignment":"left","padding_top":36,"padding_bottom":36}}},"order":["main","1663314482808aa913","1663314565ab23df4a","16633146367c42e05b","1663316378976599d1","16633164950aeeaea5"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 4
+      }
+    },
+    "1663314482808aa913": {
+      "type": "image-with-text",
+      "disabled": true,
+      "blocks": {
+        "1663314481495627c1-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Overdoughs",
+            "heading_size": "h2"
+          }
+        },
+        "1663314481495627c1-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Overdoughs<\/strong>, a homegrown pastry shop, is best known for Mini Chonky Cookies, Crinkles and signature coffee - OD Barako Cold Brew 36. While this not OD-nary bakeshop continues to serve delectable pastries, we believe in <em><strong>Doing Good Through Good Food<\/strong><\/em> by bringing our advocacy to action - Inclusivity and Diversity. Thus, we provide equal opportunities and growth to the Philippine Deaf Community which we gladly call, <strong>Our Deaf Partners.<\/strong><\/p>",
+            "text_style": "body"
+          }
+        },
+        "1663314481495627c1-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1663314481495627c1-0",
+        "1663314481495627c1-1",
+        "1663314481495627c1-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/OD_Photo_1.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1663314565ab23df4a": {
+      "type": "image-with-text",
+      "disabled": true,
+      "blocks": {
+        "1663314565908cc9db-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "DEAF INCLUSIVITY",
+            "heading_size": "h2"
+          }
+        },
+        "1663314565908cc9db-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This deaf inclusive advocacy is made possible through our partnership with organizations and institutions, namely, De La Salle College of Saint Benilde - School of Deaf Education and Applied Studies, and Hand & Heart, as we aim <em><strong>to bridge the gap between the Deaf and the hearing<\/strong><\/em>. This explains why our branches are mainstreamed by our friendly and capable Deaf Partners<\/p>",
+            "text_style": "body"
+          }
+        },
+        "1663314565908cc9db-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1663314565908cc9db-0",
+        "1663314565908cc9db-1",
+        "1663314565908cc9db-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Our_Story_Photo_1.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "16633146367c42e05b": {
+      "type": "image-with-text",
+      "disabled": true,
+      "blocks": {
+        "166331463641a2f4df-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1"
+          }
+        },
+        "166331463641a2f4df-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>With the exemplar display of both food and our Deaf Partners, we have launched the first <strong>Overdoughs Cafe<\/strong> at Promenade Mall, Greenhills that extends our product line to savory menu items like OD Sourdough Pizza, Chicken Strips, and OD Fat Fries in May 2022.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "166331463641a2f4df-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "166331463641a2f4df-0",
+        "166331463641a2f4df-1",
+        "166331463641a2f4df-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/OD_Photo_3.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1663316378976599d1": {
+      "type": "image-with-text",
+      "disabled": true,
+      "blocks": {
+        "16633163784e6b8c06-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Elait",
+            "heading_size": "h2"
+          }
+        },
+        "16633163784e6b8c06-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Elait<\/strong>, an artisanal rolled ice cream and country's first rolled yogurt, spreads <strong>Happiness in a Cup<\/strong> through the variety of novelty flavors, such as Strawberry Trifle, Chocolate Overload, Triple Choco Chonky, and alike with a choice of custard or yogurt base which are made right in front of you so to be part of the dessert-making experience.<\/p><p>This happiness in a cup also extends its array of products like the Elait Ice Cream in a Pint, Elait Yogurt Ice Cream, and Elait Milk Drinks to be enjoyed in the comforts of home.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "16633163784e6b8c06-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16633163784e6b8c06-0",
+        "16633163784e6b8c06-1",
+        "16633163784e6b8c06-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Elait_Photo_1.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "16633164950aeeaea5": {
+      "type": "image-with-text",
+      "disabled": true,
+      "blocks": {
+        "16633164954d0e9441-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Furthermore, every Elait cup purchased, you get to support the Philippine Local Dairy Industry. We believe in the quality of Filipino products. With less than 1% of our Dairy Products being used locally, we make it our mission to support this industry by <\/p><p>using locally sourced ingredients.<\/p><p>Facebook: <a href=\"https:\/\/www.facebook.com\/elaitph\"><span style=\"text-decoration:underline\">Elaitph<\/span>\t<\/a>Instagram: <a href=\"https:\/\/www.instagram.com\/elaitph\/\"><span style=\"text-decoration:underline\">@elaitph<\/span><\/a><\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "16633164954d0e9441-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Elait_Photo_2.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1663314482808aa913",
+    "1663314565ab23df4a",
+    "16633146367c42e05b",
+    "1663316378976599d1",
+    "16633164950aeeaea5"
+  ]
+}
