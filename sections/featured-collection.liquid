@@ -110,12 +110,23 @@ display:none !important;
 
 .menubar ul li a .icon{
   color: #fff;
-  background-color: #F57325;
+  <!-- background-color: #F57325; -->
   width: 100%;
+}
+
+.menubar ul li a .icon{
+  font-weight: 900;
+  font-size: 2em;
+  display: inline-block;
+  border-radius: 60px;
+  box-shadow: 0 0 2px #888;
+  padding: 1em;
+  background: #F57325;
 }
 
 .menubar ul li a .text{
   color: black;
+  font-weight: 500;
 }
 
 {% endstyle %}
@@ -132,26 +143,6 @@ endif
 <div class="color-{{ section.settings.color_scheme }} isolate gradient">
   <div class="menubar">
     <ul>
-
-
-      <!--
-        These control flow tags check to see if there is a featured image for a collection.
-        If there isn't one, then we assign the image from the first product in the collection.
-      -->
-      {%- for collection in collections -%}
-      {%- if collection.image -%}
-      {%- assign collection_image = collection.image -%}
-      {%- elsif collection.products.first and collection.products.first.images != empty -%}
-      {%- assign collection_image = collection.products.first.featured_image -%}
-      {%- else -%}
-      {%- assign collection_image = blank -%}
-      {%- endif -%}
-      {% if collection.title %}
-      {% assign collection_title = collection.title %}
-      {% endif %}
-      {%- endfor -%}
-
-
       <li>
         <a href="https://overdoughs.ph/pages/pages-mini-chonky-cookies">
           <span class="icon"><i class="fa-solid fa-burger"></i></span>
