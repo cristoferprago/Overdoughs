@@ -78,56 +78,56 @@ display:none !important;
 {% style %}
 
 .menubar{
-align-items: center;
-justify-content: center;
-margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .menubar ul{
-display: flex;
-align-items: baseline;
+  display: flex;
+  align-items: baseline;
 }
 
 .menubar ul li{
-position: relative;
-list-style: none;
-display: flex;
-width: 100%;
-height: 100px;
-z-index: 1;
+  position: relative;
+  list-style: none;
+  display: flex;
+  width: 100%;
+  height: 100px;
+  z-index: 1;
 }
 
 .menubar ul li a{
-text-decoration: none;
-position: relative;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-width: 100%;
-text-align: center;
-font-weight: 500;
+  text-decoration: none;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
 }
 
 .menubar ul li a .icon{
-color: #fff;
-<!-- background-color: #F57325; -->
-width: 100%;
+  color: #fff;
+  <!-- background-color: #F57325; -->
+  width: 100%;
 }
 
 .menubar ul li a .icon i{
-font-weight: 900;
-font-size: 2em;
-display: inline-block;
-border-radius: 60px;
-box-shadow: 0 0 2px #888;
-padding: 1em;
-background: #F57325;
+  font-weight: 900;
+  font-size: 2em;
+  display: inline-block;
+  border-radius: 60px;
+  box-shadow: 0 0 2px #888;
+  padding: 1em;
+  background: #F57325;
 }
 
 .menubar ul li a .text{
-color: black;
-font-weight: bold;
+  color: black;
+  font-weight: bold;
 }
 
 {% endstyle %}
@@ -144,78 +144,61 @@ endif
 <div class="color-{{ section.settings.color_scheme }} isolate gradient">
   <div class="menubar menubar-slider">
     <ul>
-      <li>
-        <div class="menubar-list">
-          <a href="https://overdoughs.ph/pages/pages-mini-chonky-cookies">
-            <span class="icon"><i class="fa-solid fa-cookie-bite"></i></span>
-            <span class="text">Mini Chonky Cookies</span>
-          </a>
-        </div>
+      <li class="menubar-list">
+        <a href="https://overdoughs.ph/pages/pages-mini-chonky-cookies">
+          <span class="icon"><i class="fa-solid fa-cookie-bite"></i></span>
+          <span class="text">Mini Chonky Cookies</span>
+        </a>
       </li>
 
-      <li>
-        <div class="menubar-list">
-          <a href="https://overdoughsph.myshopify.com/pages/pages-crinkles">
-            <span class="icon"><i class="fa-solid fa-cookie"></i></span>
-            <span class="text">Crinkles</span>
-          </a>
-        </div>
+      <li class="menubar-list">
+        <a href="https://overdoughsph.myshopify.com/pages/pages-crinkles">
+          <span class="icon"><i class="fa-solid fa-cookie"></i></span>
+          <span class="text">Crinkles</span>
+        </a>
       </li>
-      <li>
-        <div class="menubar-list">
-          <a href="https://overdoughs.ph/pages/pages-od-cream-bavarian-doughnuts">
-            <span class="icon"><i class="fa-solid fa-circle-dot"></i></span>
-            <span class="text">OD Bavarian Cream Doughnuts</span>
-          </a>
-        </div>
+      <li class="menubar-list">
+        <a href="https://overdoughs.ph/pages/pages-od-cream-bavarian-doughnuts">
+          <span class="icon"><i class="fa-solid fa-circle-dot"></i></span>
+          <span class="text">OD Bavarian Cream Doughnuts</span>
+        </a>
       </li>
-      <li>
-        <div class="menubar-list">
-          <a href="https://overdoughs.ph/pages/pages-spanish-bread">
-            <span class="icon"><i class="fa-solid fa-bread-slice"></i></span>
-            <span class="text">OD Spanish Bread</span>
-          </a>
-        </div>
+      <li class="menubar-list">
+        <a href="https://overdoughs.ph/pages/pages-spanish-bread">
+          <span class="icon"><i class="fa-solid fa-bread-slice"></i></span>
+          <span class="text">OD Spanish Bread</span>
+        </a>
       </li>
-      <li>
-        <div class="menubar-list">
-          <a href="https://overdoughs.ph/pages/pages-od-sourdough-pizza">
-            <span class="icon"><i class="fa-solid fa-pizza-slice"></i></span>
-            <span class="text">OD Sourdough Pizza</span>
-          </a>
-        </div>
+      <li class="menubar-list">
+        <a href="https://overdoughs.ph/pages/pages-od-sourdough-pizza">
+          <span class="icon"><i class="fa-solid fa-pizza-slice"></i></span>
+          <span class="text">OD Sourdough Pizza</span>
+        </a>
       </li>
-      <li>
-        <div class="menubar-list">
-          <a href="https://overdoughs.ph/pages/pages-chicken-combos">
-            <span class="icon"><i class="fa-solid fa-drumstick-bite"></i></span>
-            <span class="text">Chicken & Combos</span>
-          </a>
+      <li class="menubar-list">
+        <a href="https://overdoughs.ph/pages/pages-chicken-combos">
+          <span class="icon"><i class="fa-solid fa-drumstick-bite"></i></span>
+          <span class="text">Chicken & Combos</span>
+        </a>
       </li>
-      <li>
-        <div class="menubar-list">
-          <a href="https://overdoughs.ph/pages/pages-od-fat-fries">
-            <span class="icon"><i class="fa-solid fa-burger"></i></span>
-            <span class="text">OD Fat Fries</span>
-          </a>
-        </div>
+      <li class="menubar-list">
+        <a href="https://overdoughs.ph/pages/pages-od-fat-fries">
+          <span class="icon"><i class="fa-solid fa-burger"></i></span>
+          <span class="text">OD Fat Fries</span>
+        </a>
       </li>
-      <li>
-        <div class="menubar-list">
-          <a href="https://overdoughs.ph/pages/pages-elait-icecream">
-            <span class="icon"><i class="fa-solid fa-ice-cream"></i></span>
-            <span class="text">Elait Ice Cream</span>
-          </a>
-        </div>
+      <li class="menubar-list">
+        <a href="https://overdoughs.ph/pages/pages-elait-icecream">
+          <span class="icon"><i class="fa-solid fa-ice-cream"></i></span>
+          <span class="text">Elait Ice Cream</span>
+        </a>
       </li>
 
-      <li>
-        <div class="menubar-list">
-          <a href="https://overdoughs.ph/pages/order-now">
-            <span class="icon"><i class="fa-solid fa-mug-hot"></i></span>
-            <span class="text">Bottled Drinks</span>
-          </a>
-        </div>
+      <li class="menubar-list">
+        <a href="https://overdoughs.ph/pages/order-now">
+          <span class="icon"><i class="fa-solid fa-mug-hot"></i></span>
+          <span class="text">Bottled Drinks</span>
+        </a>
       </li>
 
     </ul>
