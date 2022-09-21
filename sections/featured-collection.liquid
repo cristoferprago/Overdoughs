@@ -36,17 +36,17 @@ color: #fff;
 }
 
 #card-wrapper{
-  width: 100% !important;
+width: 100% !important;
 }
 
 #Slider-{{ section.id }}{
-  display: grid !important;
-  grid-template-columns: repeat(4,1fr) !important;
+display: grid !important;
+grid-template-columns: repeat(4,1fr) !important;
 }
 
 .burger-menu{
-  display:none;
-  
+display:none;
+
 }
 
 
@@ -58,17 +58,17 @@ padding-bottom: {{ section.settings.padding_bottom }}px;
 }
 
 @media screen and (max-width: 749px) {
-  #Slider-{{ section.id }}{
-    display: grid !important;
-    grid-template-columns: repeat(2,1fr) !important;
-  }
-  .sidebar{
-    <!-- display: none; -->
-  }
-  .burger-menu{
-    display:none !important;
-  }
- 
+#Slider-{{ section.id }}{
+display: grid !important;
+grid-template-columns: repeat(2,1fr) !important;
+}
+.sidebar{
+display: none;
+}
+.burger-menu{
+display:none !important;
+}
+
 }
 
 
@@ -79,144 +79,144 @@ padding-bottom: {{ section.settings.padding_bottom }}px;
 #menuToggle
 {
 
-  position: relative;
-  top: 50px;
-  left: 50px;
-  
-  z-index: 1;
-  
-  -webkit-user-select: none;
-  user-select: none;
+position: relative;
+top: 50px;
+left: 50px;
+
+z-index: 1;
+
+-webkit-user-select: none;
+user-select: none;
 }
 
 #menuToggle a
 {
-  text-decoration: none;
-  color: #fff;
-  
-  transition: color 0.3s ease;
+text-decoration: none;
+color: #fff;
+
+transition: color 0.3s ease;
 }
 
 #menuToggle a:hover
 {
-  color: tomato;
-  background-color: #fff;
+color: tomato;
+background-color: #fff;
 }
 
 
 #menuToggle input
 {
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -70px;
-  left: -5px;
-  
-  cursor: pointer;
-  
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-  
-  -webkit-touch-callout: none;
+display: block;
+width: 40px;
+height: 32px;
+position: absolute;
+top: -70px;
+left: -5px;
+
+cursor: pointer;
+
+opacity: 0; /* hide this */
+z-index: 2; /* and place it over the hamburger */
+
+-webkit-touch-callout: none;
 }
 
 /*
- * Just a quick hamburger
- */
+* Just a quick hamburger
+*/
 #menuToggle span
 {
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  top: -70px;
-  background: #F57325;
-  border-radius: 3px;
-  
-  z-index: 1;
-  
-  transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
+display: block;
+width: 33px;
+height: 4px;
+margin-bottom: 5px;
+position: relative;
+top: -70px;
+background: #F57325;
+border-radius: 3px;
+
+z-index: 1;
+
+transform-origin: 4px 0px;
+
+transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+opacity 0.55s ease;
 }
 
 #menuToggle span:first-child
 {
-  transform-origin: 0% 0%;
+transform-origin: 0% 0%;
 }
 
 #menuToggle span:nth-last-child(2)
 {
-  transform-origin: 0% 100%;
+transform-origin: 0% 100%;
 }
 
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
+/*
+* Transform all the slices of hamburger
+* into a crossmark.
+*/
 #menuToggle input:checked ~ span
 {
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #fff;
+opacity: 1;
+transform: rotate(45deg) translate(-2px, -1px);
+background: #fff;
 }
 
 /*
- * But let's hide the middle one.
- */
+* But let's hide the middle one.
+*/
 #menuToggle input:checked ~ span:nth-last-child(3)
 {
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
+opacity: 0;
+transform: rotate(0deg) scale(0.2, 0.2);
 }
 
 /*
- * Ohyeah and the last one should go the other direction
- */
+* Ohyeah and the last one should go the other direction
+*/
 #menuToggle input:checked ~ span:nth-last-child(2)
 {
-  transform: rotate(-45deg) translate(0, -1px);
+transform: rotate(-45deg) translate(0, -1px);
 }
 
 /*
- * Make this absolute positioned
- * at the top left of the screen
- */
+* Make this absolute positioned
+* at the top left of the screen
+*/
 #menu
 {
-  position: absolute;
-  width: 300px;
-  margin: -125px 0 0 -50px;
-  padding: 50px;
-  padding-top: 80px;
-  
-  background: #F57325;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-  
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+position: absolute;
+width: 300px;
+margin: -125px 0 0 -50px;
+padding: 50px;
+padding-top: 80px;
+
+background: #F57325;
+list-style-type: none;
+-webkit-font-smoothing: antialiased;
+/* to stop flickering of text in safari */
+
+transform-origin: 0% 0%;
+transform: translate(-100%, 0);
+
+transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #menu li
 {
-  padding: 10px 0;
-  font-size: 22px;
+padding: 10px 0;
+font-size: 22px;
 }
 
 /*
- * And let's slide it in from the left
- */
+* And let's slide it in from the left
+*/
 #menuToggle input:checked ~ ul
 {
-  transform: none;
+transform: none;
 }
 
 {% endstyle %}
@@ -230,16 +230,16 @@ assign more_in_collection = true
 endif
 -%}
 
-<div class="color-{{ section.settings.color_scheme }} isolate gradient" style=" display: flex ">
+<div class="color-{{ section.settings.color_scheme }} isolate gradient" >
   <div class="sidebar">
     <!--<ul> -->
-    
+
     <!--<li> -->
     <!--
         These control flow tags check to see if there is a featured image for a collection.
         If there isn't one, then we assign the image from the first product in the collection.
       -->
-      {%- for collection in collections -%}
+    {%- for collection in collections -%}
     {%- if collection.image -%}
     {%- assign collection_image = collection.image -%}
     {%- elsif collection.products.first and collection.products.first.images != empty -%}
@@ -251,7 +251,7 @@ endif
     {% assign collection_title = collection.title %}
     {% endif %}
     {%- endfor -%}
-    
+
 
 
     <a href="https://overdoughs.ph/pages/pages-mini-chonky-cookies">
@@ -315,79 +315,6 @@ endif
 
     <!--</ul> -->
   </div>
-  
-<div class="burger-menu">
-  <div id="menuToggle">
-    <!--
-    A fake / hidden checkbox is used as click reciever,
-    so you can use the :checked selector on it.
-    -->
-    <input type="checkbox" />
-    
-    <!--
-    Some spans to act as a hamburger.
-    
-    They are acting like a real hamburger,
-    not that McDonalds stuff.
-    -->
-    <span></span>
-    <span></span>
-    <span></span>
-    
-    <!--
-    Too bad the menu has to be inside of the button
-    but hey, it's pure CSS magic.
-    -->
-    <ul id="menu">
-      <a href="https://overdoughs.ph/pages/pages-mini-chonky-cookies">
-        <li>Mini Chonky Cookies</li>
-      </a>
-    
-    
-      <a href="https://overdoughsph.myshopify.com/pages/pages-crinkles">
-        <li>Crinkles</li>
-      </a>
-    
-    
-      <a href="https://overdoughs.ph/pages/pages-od-cream-bavarian-doughnuts">
-        <li>OD Bavarian Cream Doughnuts</li>
-      </a>
-    
-    
-      <a href="https://overdoughs.ph/pages/pages-spanish-bread">
-        <li>OD Spanish Bread</li>
-      </a>
-    
-    
-      <a href="https://overdoughs.ph/pages/pages-od-sourdough-pizza">
-        <li>OD Sourdough Pizza</li>
-      </a>
-    
-    
-      <a href="https://overdoughs.ph/pages/pages-chicken-combos">
-        <li>Chicken & Combos</li>
-      </a>
-    
-    
-      <a href="https://overdoughs.ph/pages/pages-od-fat-fries">
-        <li>OD Fat Fries</li>
-      </a>
-    
-      <a href="https://overdoughs.ph/pages/pages-elait-icecream">
-        <li>Elait Ice Cream</li>
-      </a>
-    
-    
-    
-      <a href="https://overdoughs.ph/pages/order-now">
-       <li>Bottled Drinks</li> 
-      </a>
-    </ul>
-  </div>
-
-  </a>
-</div>
-
 
   <div id="card-wrapper"
     class="collection page-width{% if section.settings.swipe_on_mobile == true and section.settings.collection.all_products_count > 2 and section.settings.products_to_show > 2 %} page-width-desktop{% endif %} section-{{ section.id }}-padding">
@@ -417,7 +344,7 @@ endif
           show_secondary_image: section.settings.show_secondary_image,
           show_vendor: section.settings.show_vendor,
           show_rating: section.settings.show_rating
-          
+
           %}
         </li>
         {%- else -%}
