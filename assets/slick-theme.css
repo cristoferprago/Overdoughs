@@ -242,6 +242,10 @@ width:100%;
     display: flex;
   }
 
+  .menubar-list{
+    width: 100%
+  }
+
   .slick-prev{
     left: 0;
     z-index: 999;
