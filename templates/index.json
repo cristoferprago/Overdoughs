@@ -654,57 +654,6 @@
       "settings": {
         "include_margins": true
       }
-    },
-    "16637549378843d84a": {
-      "type": "collection-list-slider",
-      "blocks": {
-        "1663754937c20b349f-0": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "1663754937c20b349f-1": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "1663754937c20b349f-2": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "bab01d11-54f5-4ce4-a6d5-48a543e011ea": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "c9cd017e-9617-4a44-9d9c-46002f8070f0": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "1663754937c20b349f-0",
-        "1663754937c20b349f-1",
-        "1663754937c20b349f-2",
-        "bab01d11-54f5-4ce4-a6d5-48a543e011ea",
-        "c9cd017e-9617-4a44-9d9c-46002f8070f0"
-      ],
-      "settings": {
-        "title": "Collections",
-        "image_ratio": "square",
-        "color_scheme": "background-1",
-        "swipe_on_mobile": false,
-        "show_view_all": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
@@ -719,7 +668,6 @@
     "newsletter",
     "image-with-text-1",
     "164605442627780b88",
-    "1646132212da11fe99",
-    "16637549378843d84a"
+    "1646132212da11fe99"
   ]
 }
