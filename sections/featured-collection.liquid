@@ -15,7 +15,7 @@ padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px
 }
 
 .sidebar{
-display: flex;
+<!-- display: flex; -->
 flex-direction: column;
 display: none;
 
@@ -77,7 +77,11 @@ display:none !important;
 
 {% style %}
 .menubar ul{
-  list-style-type: none;
+  list-style: none;
+}
+
+.menubar ul li{
+  text-decoration: none;
 }
 
 {% endstyle %}
