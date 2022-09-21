@@ -1,1 +1,99 @@
-{"sections":{"main":{"type":"main-page","settings":{"padding_top":0,"padding_bottom":4}},"1663032973e6ea39c3":{"type":"contact-form","disabled":true,"settings":{"heading":"Leave a message","color_scheme":"background-1","padding_top":36,"padding_bottom":36}},"1663125310510e19dd":{"type":"featured-collection","settings":{"title":"{{ section.settings.collection.title }}","collection":"chonkies","products_to_show":12,"color_scheme":"background-1","show_view_all":true,"swipe_on_mobile":false,"image_ratio":"adapt","show_secondary_image":false,"show_vendor":false,"show_rating":false,"padding_top":36,"padding_bottom":36}}},"order":["main","1663032973e6ea39c3","1663125310510e19dd"]}
+{
+  "sections": {
+    "1663748357bfc1f808": {
+      "type": "slideshow",
+      "blocks": {
+        "1663748357d43df60b-0": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Pizza_1200px_x_420px.jpg",
+            "heading": "",
+            "heading_size": "medium",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "1663748357d43df60b-1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Chonky-1_1200px_x_420px.jpg",
+            "heading": "",
+            "heading_size": "medium",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "1663748357d43df60b-0",
+        "1663748357d43df60b-1"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 4
+      }
+    },
+    "1663032973e6ea39c3": {
+      "type": "contact-form",
+      "disabled": true,
+      "settings": {
+        "heading": "Leave a message",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1663125310510e19dd": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "{{ section.settings.collection.title }}",
+        "collection": "chonkies",
+        "products_to_show": 12,
+        "color_scheme": "background-1",
+        "show_view_all": true,
+        "swipe_on_mobile": false,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "1663748357bfc1f808",
+    "main",
+    "1663032973e6ea39c3",
+    "1663125310510e19dd"
+  ]
+}
