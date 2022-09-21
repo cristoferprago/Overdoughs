@@ -236,3 +236,23 @@ width:100%;
     height: auto !important;
   }
 }
+
+.menubar-slider{
+  .slick-track{
+    display: flex;
+  }
+
+  .slick-prev{
+    left: 0;
+    z-index: 999;
+  }
+
+  .slick-next{
+    right: 0;
+    z-index: 999;
+  }
+
+  padding-right: 25px;
+  overflow: hidden;
+  
+}
