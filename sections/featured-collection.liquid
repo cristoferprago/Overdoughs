@@ -231,6 +231,77 @@ endif
 -%}
 
 <div class="color-{{ section.settings.color_scheme }} isolate gradient" >
+  <div class="menubar">
+    <ul>
+
+
+      <!--
+        These control flow tags check to see if there is a featured image for a collection.
+        If there isn't one, then we assign the image from the first product in the collection.
+      -->
+      {%- for collection in collections -%}
+      {%- if collection.image -%}
+      {%- assign collection_image = collection.image -%}
+      {%- elsif collection.products.first and collection.products.first.images != empty -%}
+      {%- assign collection_image = collection.products.first.featured_image -%}
+      {%- else -%}
+      {%- assign collection_image = blank -%}
+      {%- endif -%}
+      {% if collection.title %}
+      {% assign collection_title = collection.title %}
+      {% endif %}
+      {%- endfor -%}
+
+
+      <li>
+        <a href="https://overdoughs.ph/pages/pages-mini-chonky-cookies">
+          {{ collection.title }}Mini Chonky Cookies
+        </a>
+      </li>
+
+      <li>
+        <a href="https://overdoughsph.myshopify.com/pages/pages-crinkles">
+          {{ collection.title }}Crinkles
+        </a>
+      </li>
+      <li>
+        <a href="https://overdoughs.ph/pages/pages-od-cream-bavarian-doughnuts">
+          {{ collection.title }}OD Bavarian Cream Doughnuts
+        </a>
+      </li>
+      <li>
+        <a href="https://overdoughs.ph/pages/pages-spanish-bread">
+          {{ collection.title }}OD Spanish Bread
+        </a>
+      </li>
+      <li>
+        <a href="https://overdoughs.ph/pages/pages-od-sourdough-pizza">
+          {{ collection.title }}OD Sourdough Pizza
+        </a>
+      </li>
+      <li>
+        <a href="https://overdoughs.ph/pages/pages-chicken-combos">
+          {{ collection.title }}Chicken & Combos
+        </a>
+      </li>
+      <li>
+        <a href="https://overdoughs.ph/pages/pages-od-fat-fries">
+          {{ collection.title }}OD Fat Fries
+        </a>
+
+        <a href="https://overdoughs.ph/pages/pages-elait-icecream">
+          {{ collection.title }}Elait Ice Cream
+        </a>
+      </li>
+
+      <li>
+        <a href="https://overdoughs.ph/pages/order-now">
+          {{ collection.title }}Bottled Drinks
+        </a>
+      </li>
+
+    </ul>
+  </div>
   <div class="sidebar">
     <!--<ul> -->
 
