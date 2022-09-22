@@ -933,3 +933,11 @@ $(document).ready(function() {
   })
 })
   
+
+$(document).ready(function(){
+  $('.menubar-slider').each(function(){
+    var num_slides = 5;
+
+    $(this).slick({slidesToShow:num_slides});
+  });
+});
