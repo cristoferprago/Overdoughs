@@ -939,13 +939,13 @@ $(document).ready(function() {
     
     var num_slides = $(this).data("slides");
   
-  $(this).slick({slidesToShow:4,slidesToScroll: 4,
+  $(this).slick({slidesToShow:5,slidesToScroll: 1,
     responsive: [
     {
       breakpoint: 1024,
       settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 5,
+        slidesToScroll: 1,
         infinite: true,
         dots: true
       }
@@ -953,15 +953,15 @@ $(document).ready(function() {
     {
       breakpoint: 600,
       settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3
+        slidesToShow: 4,
+        slidesToScroll: 1
       }
     },
     {
       breakpoint: 480,
       settings: {
         slidesToShow: 3,
-        slidesToScroll: 3
+        slidesToScroll: 1
       }
     }
     // You can unslick at a given breakpoint now by adding:
