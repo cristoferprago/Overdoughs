@@ -18,3 +18,12 @@ document.addEventListener('shopify:block:deselect', function(event) {
   const parentSlideshowComponent = event.target.closest('slideshow-component');
   if (parentSlideshowComponent.autoplayButtonIsSetToPlay) parentSlideshowComponent.play();
 });
+
+
+$(document).ready(function(){
+  $('.menubar-slider').each(function(){
+    var num_slides = 5;
+
+    $(this).slick({slidesToShow:num_slides});
+  });
+});
