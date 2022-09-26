@@ -12,6 +12,11 @@
           <textarea class="text-area field__input" name="note" form="cart" id="Cart-note" placeholder="{{ 'sections.cart.note' | t }}">{{ cart.note }}</textarea>
         </cart-note>
       {%- endif -%}
+      
+     <p class="line-item-property__field">
+      <label for="kids-name">Kid's Name: (Please use comma to seperate kids' name) </label>
+      <textarea id="kids-name" name="properties[Kid's Name]" style="width: 100%; padding: 20px 0px"></textarea>
+    </p>
 
       <div class="cart__blocks">
         {% for block in section.blocks %}
