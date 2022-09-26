@@ -85,10 +85,6 @@ Use the assign statement outside of this comment block at the top of your templa
 <div class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}" {{ block.shopify_attributes }}>
    
     <div>
-                     <p class="line-item-property__field">
-      <label for="kids-name">Kid's Name: (Please use comma to separate kids' name) </label>
-      <input required class="required" id="kids-name" type="text" name="properties[Kid's Name]">
-    </p>
 
               <quantity-input class="quantity">
                 <button class="quantity__button no-js-hidden" name="minus" type="button">
