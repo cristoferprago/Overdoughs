@@ -1,0 +1,155 @@
+{% comment %}
+Source: https://gist.github.com/carolineschnapp/9122054
+If you are not on a collection page, do define which collection to use in the order form.
+Use the following assign statement, replace 'your-collection-handle-here' with your collection handle.
+{% assign collection = collections.your-collection-handle-here %}
+Use the assign statement outside of this comment block at the top of your template.
+{% endcomment %}
+
+
+{% style %}
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+  
+.pure-table-odd td a{
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+}
+
+.title{
+   text-align: center;
+}
+
+.submit-button{
+    width: 100%;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    line-height: 3;
+    border-radius: 50px;
+    background: black;
+    color: #fff;
+}
+  
+  
+{% endstyle %}
+
+
+{% paginate collection.products by 100 %}
+<div class="container">
+<form class="form-container"action="/cart" method="post">
+  
+  {% if collection.products_count > 0 %}
+    <div>
+      <h1 class="title">{% if template contains 'page' %}{{ page.title }}{% else %}{{ collection.title }}{% endif %}</h1>
+    </div>
+  {% else %}
+    <h1>{% if template contains 'page' %}{{ page.title }}{% else %}{{ collection.title }}{% endif %}</h1>
+  {% endif %}
+
+  {% if template contains 'page' and page.content.size > 0 %}
+    <div class="rte">
+      {{ page.content }}
+    </div>  
+  {% elsif collection.description.size > 0 %}
+    <div class="rte">
+      {{ collection.description }}
+    </div>
+  {% endif %}
+
+  {% if collection.products_count > 0 %}
+
+    <table>
+      <tbody>
+      {% for product in collection.products %}
+        {% if product.available %}
+          {% for variant in product.variants %}
+            {% if variant.available %}
+              <tr class="pure-table-odd">
+              
+                <td>
+                  <a href="">
+                   {{ product.title }}{% unless variant.title contains 'Default' %} - {{ variant.title }}{% endunless %}{% unless variant.sku == blank %} - {{ variant.sku }}{% endunless %}
+                  </a>
+                </td>
+                <td>
+                   {{ variant.price | money }}
+                </td>
+                
+                <td>
+<div class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}" {{ block.shopify_attributes }}>
+              
+
+              <quantity-input class="quantity">
+                <button class="quantity__button no-js-hidden" name="minus" type="button">
+                  <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
+                  {% render 'icon-minus' %}
+                </button>
+                <input class="quantity__input"
+                    
+
+                  name="updates[{{ variant.id }}]"
+                  onfocus="this.select()"
+                  class="quantity field"
+                   min="0" {% unless variant.inventory_management == blank or variant.inventory_policy == 'continue' %}
+                     max="{{ variant.inventory_quantity }}" {% endunless %}
+              type="number" value="0" tabindex="1"
+                  >
+                <button class="quantity__button no-js-hidden" name="plus" type="button">
+                  <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: product.title | escape }}</span>
+                  {% render 'icon-plus' %}
+                </button>
+              </quantity-input>
+  
+            </div>
+                  
+                </td>
+              </tr>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+      </tbody>
+    </table>
+
+
+
+  
+     <p class="line-item-property__field">
+      <label for="kids-name">Kid's Name: (Please use comma to seperate kids' name) </label>
+      <textarea id="kids-name" name="properties[Kid's Name]" style="width: 100%; padding: 20px 0px"></textarea>
+    </p>
+    <div>
+
+      
+      <input class="submit-button" type="submit" value="Add to the cart" />
+    </div>
+  
+  {% else %}
+    <p>There are no products in this view.</p>
+  {% endif %}
+   
+</form>
+</div>
+{% endpaginate %}
+
+{% if collection.products_count > 0 %}
+<script>
+jQuery(function($) {
+  $('table .quantity:first').focus();
+  $('[max]').change(function() {
+    var max = parseInt($(this).attr('max'), 10);
+    var value = parseInt($(this).val(), 10) || 0;
+    if (value > max) { 
+      alert('We only have ' + max + ' of this item in stock');
+      $(this).val(max); 
+    }    
+  });
+});
+</script>
+{% endif %}
