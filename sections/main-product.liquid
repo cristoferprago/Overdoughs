@@ -572,10 +572,7 @@ color: #fff;
               {%- form 'product', product, id: 'product-form-installment', class: 'installment caption-large' -%}
                 <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
                 {{ form | payment_terms }}
-                <p class="line-item-property__field">
-  <label for="your-name">Your name</label>
-  <input id="your-name" type="text" name="properties[Your name]">
-</p>
+                
               {%- endform -%}
             </div>
           {%- when 'description' -%}
@@ -786,10 +783,14 @@ color: #fff;
                       {{ form | payment_button }}
                     {%- endif -%}
                   </div>
+{% assign testtag = '' %}
+  {% if testtag.tag == 'thegoodsign' %}
+                  
                   <p class="line-item-property__field">
   <label for="your-name">Your name</label>
   <input id="your-name" type="text" name="properties[Your name]">
 </p>
+    {% endif %}
                 {%- endform -%}
               </product-form>
 
