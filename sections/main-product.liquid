@@ -783,14 +783,15 @@ color: #fff;
                       {{ form | payment_button }}
                     {%- endif -%}
                   </div>
-{% assign testtag = '' %}
-  {% if testtag.tag == 'thegoodsign' %}
+{% for tag in product.tags %}
+  {% if tag == 'thegoodsign' %}
                   
                   <p class="line-item-property__field">
   <label for="your-name">Your name</label>
   <input id="your-name" type="text" name="properties[Your name]">
 </p>
     {% endif %}
+   {% endfor %}
                 {%- endform -%}
               </product-form>
 
