@@ -308,8 +308,9 @@
   function clickme(a){
     console.log(a);
   } 
-  $('#cart').on('keyup change paste', 'input, select, textarea', function(){
-    console.log('Form changed!');
+  jQuery('#quantity__input').on('keyup change paste', 'input, select, textarea', function(){
+    console.log(this.value);
+    
 });
   
   
