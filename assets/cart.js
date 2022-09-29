@@ -25,11 +25,7 @@ class CartItems extends HTMLElement {
 
     this.addEventListener('change', this.debouncedOnChange.bind(this));
   }
-    let items = cart.items;
 
-for(var i=0; i < items.length; i++){
-console.log(items[i].id);
-}
   
   onChange(event) {
     this.updateQuantity(event.target.dataset.index, event.target.value, document.activeElement.getAttribute('name'));
