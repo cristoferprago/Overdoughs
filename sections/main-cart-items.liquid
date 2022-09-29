@@ -294,6 +294,20 @@
   </form>
 </cart-items>
 
+<script>
+jQuery.getJSON('/cart.js', function(cart) {
+ 
+    let items = cart.items;
+
+for(var i=0; i < items.length; i++){
+console.log(items[i].title);
+}
+ 
+} );
+  
+</script>
+                          
+
 {% schema %}
 {
   "name": "t:sections.main-cart-items.name",
